@@ -32,3 +32,26 @@ nav a {
 nav a:hover {
     color: #ff50ef;
 }
+
+section {
+    padding: 30px 20px;
+}
+
+h2 {
+    color: #e0c8ff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+figure {
+    margin: 0 0 20px 0;
+}
+
+figcaption {
+    font-size: 0.8em;
+    color: #bbbbbb;
+    margin-top: 5px;
+}
