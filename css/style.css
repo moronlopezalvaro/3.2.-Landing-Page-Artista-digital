@@ -41,7 +41,8 @@ h2 {
     color: #e0c8ff;
 }
 
-img {
+img,
+video {
     max-width: 100%;
     height: auto;
 }
