@@ -67,3 +67,13 @@ figcaption {
 .galeria figure {
     width: 400px;
 }
+
+footer {
+    padding: 15px;
+    background-color: #1e0f46;
+    font-size: 0.9em;
+}
+
+figcaption a {
+    color: #e0c8ff;
+}
