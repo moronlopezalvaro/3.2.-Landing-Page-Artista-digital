@@ -10,7 +10,43 @@
 
 <body>
     <header>
-        <img src="assets/img/logo.svg" alt="Planeta con anillo" width="60" height="60">
+        <a href="#" class="logo" aria-label="Nébula, volver al inicio">
+            <svg width="60" height="60" viewBox="0 0 100 100" aria-label="Logotipo de Nébula">
+                <g>
+                    <ellipse class="anillo" cx="50" cy="50" rx="44" ry="10" />
+                    <g transform="matrix(1,0,0,1,50,50)">
+                        <ellipse cx="0" cy="-0" rx="38.5" ry="13"
+                            style="fill:rgb(255,80,239);fill-opacity:0.25;stroke:rgb(191,150,186);stroke-width:3px;stroke-miterlimit:3.5;" />
+                    </g>
+                    <g transform="matrix(1,0,0,1,50,50)">
+                        <ellipse cx="0" cy="-0" rx="33" ry="16"
+                            style="fill:rgb(255,80,239);fill-opacity:0.5;stroke:rgb(128,100,124);stroke-width:2px;stroke-linejoin:round;stroke-miterlimit:3;" />
+                    </g>
+                    <g transform="matrix(1,0,0,1,50,50)">
+                        <ellipse cx="0" cy="-0" rx="27.5" ry="19"
+                            style="fill:rgb(255,80,239);fill-opacity:0.75;stroke:rgb(64,50,62);stroke-width:1px;stroke-linejoin:round;stroke-miterlimit:2.5;" />
+                    </g>
+                    <circle class="planeta" cx="50" cy="50" r="22" />
+                    <g transform="matrix(1,0,0,1,58,43.125)">
+                        <path
+                            d="M0,-19.125C4.666,-18.458 9.147,-16.022 12.498,-12.211C16.154,-9.013 18.523,-4.777 19.248,-0.353C18.643,4.312 16.265,8.818 12.498,12.211C9.147,16.022 4.666,18.458 0,19.125C-4.666,18.458 -9.147,16.022 -12.498,12.211C-16.265,8.818 -18.643,4.312 -19.248,-0.353C-18.523,-4.777 -16.154,-9.013 -12.498,-12.211C-9.147,-16.022 -4.666,-18.458 -0,-19.125Z"
+                            style="fill:rgb(255,124,243);" />
+                    </g>
+                    <g transform="matrix(1,0,0,1,66,36.25)">
+                        <path
+                            d="M0,-16.25C3.444,-14.917 6.765,-12.403 9.332,-8.974C12.658,-6.62 15.126,-3.573 16.499,-0.402C15.206,3.042 12.732,6.378 9.332,8.974C6.765,12.403 3.444,14.917 0,16.25C-3.444,14.917 -6.765,12.403 -9.332,8.974C-12.732,6.378 -15.206,3.042 -16.499,-0.402C-15.126,-3.573 -12.658,-6.62 -9.332,-8.974C-6.765,-12.403 -3.444,-14.917 -0,-16.25Z"
+                            style="fill:rgb(255,168,247);" />
+                    </g>
+                    <g transform="matrix(1,0,0,1,74,29.375)">
+                        <path
+                            d="M0,-13.375C2.222,-11.375 4.382,-8.785 6.166,-5.737C9.162,-4.227 11.73,-2.37 13.749,-0.451C11.77,1.771 9.199,3.939 6.166,5.737C4.382,8.785 2.222,11.375 0,13.375C-2.222,11.375 -4.382,8.785 -6.166,5.737C-9.199,3.939 -11.77,1.771 -13.749,-0.451C-11.73,-2.37 -9.162,-4.227 -6.166,-5.737C-4.382,-8.785 -2.222,-11.375 -0,-13.375Z"
+                            style="fill:rgb(255,211,251);" />
+                    </g>
+                    <path d="M82,12L85,20L93,22L85,25L82,33L79,25L71,22L79,20L82,12Z"
+                        style="fill:white;fill-rule:nonzero;" />
+                </g>
+            </svg>
+        </a>
         <h1>Nébula</h1>
         <nav>
             <a href="#galeria">Galería</a>
@@ -32,27 +68,38 @@
         </section>
         <section id="galeria">
             <h2>Galería</h2>
+            <h3>↓↓ Haz click en una de las 3 imágenes para verla más grande ↓↓</h3>
+            <div class="visor">
+                <img id="visor-imagen" src="assets/img/galeria-1-grande.webp" alt="Imagen de la galería en grande"
+                    width="1200" height="750" loading="lazy">
+            </div>
             <div class="galeria">
                 <figure>
-                    <img src="assets/img/galeria-1.webp" alt="Planeta morado con anillos violetas sobre fondo negro"
-                        width="400" height="250" loading="lazy">
+                    <button class="miniatura" data-grande="assets/img/galeria-1-grande.webp">
+                        <img src="assets/img/galeria-1.webp" alt="Planeta morado con anillos violetas sobre fondo negro"
+                            width="400" height="250" loading="lazy">
+                    </button>
                     <figcaption>"Un planeta púrpura y negro" por <a
                             href="https://unsplash.com/es/fotos/un-objeto-purpura-y-negro-en-medio-de-un-fondo-negro-MaQZ6kUxNsU">BoliviaInteligente
                             en Unsplash</a>, <a href="https://unsplash.com/es/licencia">Licencia Unsplash</a>
                     </figcaption>
                 </figure>
                 <figure>
-                    <img src="assets/img/galeria-2.webp"
-                        alt="Pintura abstracta en espiral azul y blanca que recuerda a una galaxia" width="400"
-                        height="250" loading="lazy">
+                    <button class="miniatura" data-grande="assets/img/galeria-2-grande.webp">
+                        <img src="assets/img/galeria-2.webp"
+                            alt="Pintura abstracta en espiral azul y blanca que recuerda a una galaxia" width="400"
+                            height="250" loading="lazy">
+                    </button>
                     <figcaption>"Azul y negro ilustración abstracta" por <a
                             href="https://unsplash.com/es/fotos/azul-y-negro-ilustracion-abstracta-hgThOxNqQq0">Pawel
                             Czerwinski en Unsplash</a>, <a href="https://unsplash.com/es/licencia">Licencia Unsplash</a>
                     </figcaption>
                 </figure>
                 <figure>
-                    <img src="assets/img/galeria-3.webp" alt="Planeta rosa rodeado de anillos rosas y morados"
-                        width="400" height="250" loading="lazy">
+                    <button class="miniatura" data-grande="assets/img/galeria-3-grande.webp">
+                        <img src="assets/img/galeria-3.webp" alt="Planeta rosa rodeado de anillos rosas y morados"
+                            width="400" height="250" loading="lazy">
+                    </button>
                     <figcaption>"Planeta rosa rodeado de anillos rosas y morados" por <a
                             href="https://unsplash.com/es/fotos/un-fondo-negro-con-circulos-rosas-y-morados-6YI0XmpZ_I8">BoliviaInteligente
                             en Unsplash</a>, <a href="https://unsplash.com/es/licencia">Licencia Unsplash</a>
@@ -62,24 +109,33 @@
         </section>
         <section id="video">
             <h2>Vídeo de presentación</h2>
-            <figure>
-                <video controls width="1280" height="720" poster="assets/img/miniatura.webp" preload="metadata">
-                    <source src="assets/video/presentacion.mp4" type="video/mp4">
-                    Tu navegador no puede reproducir este vídeo.
-                </video>
-                <figcaption>"Nebulosa CGI espacial" por <a
-                        href="https://pixabay.com/es/videos/nebulosa-cgi-espacial-386753/">uxcsani en Pixabay</a>, <a
-                        href="https://pixabay.com/es/service/license-summary/">Licencia de contenido de Pixabay</a>
-                </figcaption>
-            </figure>
+            <button id="abrir-modal" class="boton">▶ Ver Reel de Animación</button>
         </section>
+        <div id="modal" class="modal">
+            <div class="modal-contenido">
+                <button id="cerrar-modal" class="cerrar" aria-label="Cerrar vídeo">✕</button>
+                <h3>Reel de Animación</h3>
+                <figure>
+                    <video id="video-reel" controls width="1280" height="720" poster="assets/img/miniatura.webp"
+                        preload="metadata">
+                        <source src="assets/video/presentacion.mp4" type="video/mp4">
+                        Tu navegador no puede reproducir este vídeo.
+                    </video>
+                    <figcaption>"Nebulosa CGI espacial" por <a
+                            href="https://pixabay.com/es/videos/nebulosa-cgi-espacial-386753/">uxcsani en Pixabay</a>,
+                        <a href="https://pixabay.com/es/service/license-summary/">Licencia de contenido de Pixabay</a>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
         <section>
             <h2>Ambiente sonoro</h2>
             <figure>
-                <audio controls preload="metadata">
+                <audio id="audio-ambiente" preload="metadata">
                     <source src="assets/audio/ambiente.mp3" type="audio/mpeg">
                     Tu navegador no puede reproducir este audio.
                 </audio>
+                <button id="boton-audio" class="boton">▶ Escuchar ambiente espacial</button>
                 <figcaption>"Sci-Fi Documentary" por <a
                         href="https://pixabay.com/es/music/clásico-moderno-sci-fi-documentary-262608/">leberch en
                         Pixabay</a>, <a href="https://pixabay.com/es/service/license-summary/">Licencia de contenido de
@@ -88,14 +144,21 @@
         </section>
         <section id="contacto">
             <h2>¿Hablamos?</h2>
-            <a href="mailto:nebulart@contacto.com">
-                <img src="assets/img/calltoaction.webp" alt="Telefono futurista" width="300" height="90" loading="lazy">
+            <a href="mailto:nebulart@contacto.com" class="cta">
+                <img src="assets/img/calltoaction.webp" alt="Teléfono futurista: haz clic para contactar" width="300"
+                    height="210" loading="lazy">
             </a>
         </section>
     </main>
+
     <footer>
-        <p>© 2026 Nébula</p>
+        <p>© 2026 Nébula · Este proyecto está bajo licencia
+            <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a>
+        </p>
+        <p><a href="credits.html">Créditos y atribuciones</a></p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
